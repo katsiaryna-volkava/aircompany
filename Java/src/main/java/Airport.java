@@ -16,10 +16,10 @@ public class Airport {
 
 
     public List<PassengerPlane> getPassengerPlane() {
-        List<? extends Plane> l = this.planes;
-        List<PassengerPlane> x = new ArrayList<>();
-        for (Plane p : l) {if (p instanceof PassengerPlane) {x.add((PassengerPlane) p);}}
-        return x;
+        List<? extends Plane> passengerPlanes = this.planes;
+        List<PassengerPlane> passengerPlane = new ArrayList<>();
+        for (Plane plane : passengerPlanes) {if (plane instanceof PassengerPlane) {passengerPlane.add((PassengerPlane) plane);}}
+        return passengerPlane;
     }
 
     public List<MilitaryPlane> getMilitaryPlanes() {
@@ -43,12 +43,6 @@ public class Airport {
                 planeWithMaxCapacity = passengerPlanes.get(i);
             }
         }
-
-
-
-
-
-
         return planeWithMaxCapacity;
     }
 
