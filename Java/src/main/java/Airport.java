@@ -14,9 +14,8 @@ public class Airport {
     private List<? extends Plane> planes;
 
 
-
     public List<PassengerPlane> getPassengerPlane() {
-        List<? extends Plane> planes = this.planes;
+        //    List<? extends Plane> planes = this.planes;
         List<PassengerPlane> passengerPlanes = new ArrayList<>();
         for (Plane plane : planes) {
             if (plane instanceof PassengerPlane) {
@@ -31,13 +30,11 @@ public class Airport {
         for (Plane plane : planes) {
             if (plane instanceof MilitaryPlane) {
                 militaryPlanes.add((MilitaryPlane) plane);
-            } //if
-            else {
-
-            } // else
-        } //for
+            }
+        }
         return militaryPlanes;
     }
+
 
     public PassengerPlane getPassengerPlaneWithMaxPassengersCapacity() {
         List<PassengerPlane> passengerPlanes = getPassengerPlane();
@@ -51,15 +48,15 @@ public class Airport {
     }
 
     public List<MilitaryPlane> getTransportMilitaryPlanes() {
-    List<MilitaryPlane> transportMilitaryPlanes = new ArrayList<>();
-    List<MilitaryPlane> militaryPlanes = getMilitaryPlanes();
-    for (int i = 0; i < militaryPlanes.size(); i++) {
-    MilitaryPlane plane = militaryPlanes.get(i);
-    if (plane.getType() == MilitaryType.TRANSPORT) {
-    transportMilitaryPlanes.add(plane);
-    }
-    }
-    return transportMilitaryPlanes;
+        List<MilitaryPlane> transportMilitaryPlanes = new ArrayList<>();
+        List<MilitaryPlane> militaryPlanes = getMilitaryPlanes();
+        for (int i = 0; i < militaryPlanes.size(); i++) {
+            MilitaryPlane plane = militaryPlanes.get(i);
+            if (plane.getType() == MilitaryType.TRANSPORT) {
+                transportMilitaryPlanes.add(plane);
+            }
+        }
+        return transportMilitaryPlanes;
     }
 
     public List<MilitaryPlane> getBomberMilitaryPlanes() {
@@ -97,6 +94,7 @@ public class Airport {
 
     /**
      * Sorts by max speed
+     *
      * @return Airport
      */
     public Airport sortByMaxSpeed() {
