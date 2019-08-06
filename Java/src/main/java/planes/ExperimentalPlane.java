@@ -27,7 +27,7 @@ public class ExperimentalPlane extends Plane {
         return type;
     }
 
-    public void setType (ExperimentalTypes type) {
+    public void setType(ExperimentalTypes type) {
         this.type = type;
     }
 
