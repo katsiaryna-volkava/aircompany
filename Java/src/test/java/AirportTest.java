@@ -67,7 +67,7 @@ public class AirportTest {
     public void getPassengerPlaneWithMaxCapacity() {
         Airport airport = new Airport(planes);
         PassengerPlane planeWithMaxPassengerCapacity = airport.getPassengerPlaneWithMaxPassengersCapacity();
-        Assert.assertTrue(expectedPlaneWithMaxPassengersCapacity.equals(planeWithMaxPassengerCapacity));
+        Assert.assertEquals(planeWithMaxPassengerCapacity, expectedPlaneWithMaxPassengersCapacity);
     }
 
     @Test
