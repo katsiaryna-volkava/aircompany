@@ -90,7 +90,7 @@ public class AirportTest {
     }
 
     @Test
-    public void hasAtLeastOneBomberInMilitaryPlanes() {
+    public void thereIsAtLeastOneBomberInMilitaryPlanes() {
         Airport airport = new Airport(planes);
         List<MilitaryPlane> militaryPLanes = airport.getMilitaryPlanes();
         boolean isThereAnyBomber = false;
