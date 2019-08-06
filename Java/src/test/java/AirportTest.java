@@ -60,7 +60,7 @@ public class AirportTest {
                 break;
             }
         }
-        Assert.assertEquals(isThereAnyNotTransportMilitaryPlane, false);
+        Assert.assertFalse(isThereAnyNotTransportMilitaryPlane);
     }
 
     @Test
