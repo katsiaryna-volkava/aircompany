@@ -53,14 +53,14 @@ public class AirportTest {
     public void testGetTransportMilitaryPlanes() {
         Airport airport = new Airport(planes);
         List<MilitaryPlane> transportMilitaryPlanes = airport.getTransportMilitaryPlanes();
-        boolean flag = false;
+        boolean isThereAnyNotTransportMilitaryPlane = false;
         for (MilitaryPlane militaryPlane : transportMilitaryPlanes) {
-            if ((militaryPlane.getType() == MilitaryType.TRANSPORT)) {
-                flag = true;
+            if ((militaryPlane.getType() != MilitaryType.TRANSPORT)) {
+                isThereAnyNotTransportMilitaryPlane = true;
                 break;
             }
         }
-        Assert.assertEquals(flag, true);
+        Assert.assertEquals(isThereAnyNotTransportMilitaryPlane, false);
     }
 
     @Test
