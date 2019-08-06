@@ -17,6 +17,10 @@ public class MilitaryPlane extends Plane {
         return type;
     }
 
+    public void setType(MilitaryType type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return super.toString().replace("}",

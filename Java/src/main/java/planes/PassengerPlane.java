@@ -16,6 +16,10 @@ public class PassengerPlane extends Plane {
         return passengersCapacity;
     }
 
+    public void setPassengersCapacity(int passengersCapacity) {
+        this.passengersCapacity = passengersCapacity;
+    }
+
     @Override
     public String toString() {
         return super.toString().replace("}", ", " +
