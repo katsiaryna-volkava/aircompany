@@ -104,7 +104,7 @@ public class AirportTest {
     }
 
     @Test
-    public void experimentalPlaneHasClassificationLevelHigherThanUnclassified() {
+    public void thereAreNoUnclassifiedExperimentalPlanes() {
         Airport airport = new Airport(planes);
         List<ExperimentalPlane> experimentalPlanes = airport.getExperimentalPlanes();
         boolean hasUnclassifiedPlanes = false;
